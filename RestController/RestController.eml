@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component LANGUAGE_LEVEL="JDK_1_8" jdk="17" jdk_type="JavaSDK">
+	<output-test url="file://$MODULE_DIR$/RestController/target/test-classes"/>
+	<contentEntry url="file://$MODULE_DIR$/RestController">
+		<testFolder url="file://$MODULE_DIR$/RestController/src/test/java"/>
+		<testFolder url="file://$MODULE_DIR$/RestController/src/test/resources"/>
+		<excludeFolder url="file://$MODULE_DIR$/RestController/target"/>
+	</contentEntry>
+	<lib name="Maven: jakarta.servlet:jakarta.servlet-api:5.0.0" scope="PROVIDED"/>
+	<levels>
+		<level name="Maven: org.springframework:spring-context:6.2.2" value="project"/>
+		<level name="Maven: org.springframework:spring-aop:6.2.2" value="project"/>
+		<level name="Maven: org.springframework:spring-beans:6.2.2" value="project"/>
+		<level name="Maven: org.springframework:spring-core:6.2.2" value="project"/>
+		<level name="Maven: org.springframework:spring-jcl:6.2.2" value="project"/>
+		<level name="Maven: org.springframework:spring-expression:6.2.2" value="project"/>
+		<level name="Maven: io.micrometer:micrometer-observation:1.14.3" value="project"/>
+		<level name="Maven: io.micrometer:micrometer-commons:1.14.3" value="project"/>
+		<level name="Maven: org.springframework:spring-webmvc:6.2.2" value="project"/>
+		<level name="Maven: org.springframework:spring-web:6.2.2" value="project"/>
+		<level name="Maven: jakarta.servlet:jakarta.servlet-api:5.0.0" value="project"/>
+		<level name="Maven: com.fasterxml.jackson.core:jackson-databind:2.15.3" value="project"/>
+		<level name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.15.3" value="project"/>
+		<level name="Maven: com.fasterxml.jackson.core:jackson-core:2.15.3" value="project"/>
+	</levels>
+</component>

@@ -1,0 +1,21 @@
+package org.example.controller;
+
+import org.example.dto.CustomerDto;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("json")
+public class JSONController {
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    public  String test1(@RequestBody CustomerDto customerDto){
+        return customerDto.toString();
+    }
+
+    @GetMapping(path = "getAll" , produces = MediaType.)
+    public CustomerDto test2(){
+        return new CustomerDto("10","Mala")
+
+    }
+
+}

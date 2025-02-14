@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="untitled" />
+        <module name="Spring_DI" />
+        <module name="O2_SpringBean_LiftCycle" />
+        <module name="RestController" />
+        <module name="O1_Spring_Core" />
+      </profile>
+      <profile name="Annotation profile for I3_SpringBoot" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="I3_SpringBoot" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="12_SpringData_JPA" target="17" />
+      <module name="BackEnd" target="17" />
+      <module name="BckEnd" target="1.8" />
+      <module name="FrontEnd" target="17" />
+      <module name="MVC" target="17" />
+      <module name="untitled1" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="12_SpringData_JPA" options="-parameters" />
+      <module name="I3_SpringBoot" options="-parameters" />
+    </option>
+  </component>
+</project>
