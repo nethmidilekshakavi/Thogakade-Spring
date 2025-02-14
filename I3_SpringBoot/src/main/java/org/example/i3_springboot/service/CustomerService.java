@@ -1,46 +1,18 @@
 package org.example.i3_springboot.service;
 
-
 import org.example.i3_springboot.Dto.CustomerDto;
-import org.example.i3_springboot.Repo.CustomerRepo;
-import org.example.i3_springboot.entity.Customer;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static org.yaml.snakeyaml.nodes.NodeId.mapping;
+public interface CustomerService {
 
-@Service
-public class CustomerService {
+    boolean saveCustomer(CustomerDto customerDto);
 
-    @Autowired
-    private CustomerRepo customerRepo;
+    void deleteCustomer(Integer id);
 
-    public boolean addCustomer(CustomerDto customerDto){
-        if (customerRepo.existsById(customerDto.getId())){
-            return false;
-        }
-       customerRepo.save(new Customer(customerDto.getId(),customerDto.getName(),customerDto.getAddress()));
-        System.out.println("Service Method  " + customerDto.getAddress() );
-        //data-save
-        return true;
-    }
+    boolean updateCustomer(Integer id, CustomerDto customerDto);
 
-    public List<Customer> getAllCustomer() {
-        return customerRepo.findAll();
-    }
+    List<CustomerDto> gellAll();
 
-
-    public boolean deleteCustomer(Integer id){
-        customerRepo.deleteById(id);
-        return true;
-    }
-
-    public boolean update(CustomerDto customerDto){
-        customerRepo.save(new Customer(customerDto.getId(),customerDto.getName(),customerDto.getAddress()));
-        System.out.println("update " + customerDto.getAddress());
-        return true;
-    }
 
 }

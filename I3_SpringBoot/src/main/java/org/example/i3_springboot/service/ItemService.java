@@ -1,14 +1,16 @@
 package org.example.i3_springboot.service;
 
-import org.example.i3_springboot.Repo.ItemRepo;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.example.i3_springboot.Dto.ItemDto;
 
-@Service
-public class ItemService {
+import java.util.List;
 
-    @Autowired
-    private ItemRepo itemRepo;
+public interface ItemService {
 
+    boolean saveItem(ItemDto itemDto);
 
+    boolean updateItem(String code , ItemDto itemDto);
+
+    void deleteItem(String code);
+
+    List<ItemDto> getAll ();
 }
