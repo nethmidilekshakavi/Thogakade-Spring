@@ -1,6 +1,7 @@
 package org.example.i3_springboot.Controller;
 
 import org.example.i3_springboot.Dto.ItemDto;
+import org.example.i3_springboot.entity.Item;
 import org.example.i3_springboot.service.IMPL.ItemServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,16 +25,16 @@ public class ItemController {
     }
 
     @GetMapping("getAll")
-    public List<ItemDto> getAllItem(){
+    public List<Item> getAllItem(){
 
-        List<ItemDto> list = itemService.getAll();
+        List<Item> list = itemService.getAll();
 
         return list;
     }
 
 
-    @PutMapping("update")
-    public boolean updateItem(@RequestBody String code, ItemDto itemDto){
+    @PutMapping("update/{code}")
+    public boolean updateItem(@PathVariable String code,@RequestBody ItemDto itemDto){
         boolean response = itemService.updateItem(code,itemDto);
         return response;
     }

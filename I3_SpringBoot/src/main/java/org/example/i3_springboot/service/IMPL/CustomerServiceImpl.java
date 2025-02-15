@@ -1,6 +1,7 @@
 package org.example.i3_springboot.service.IMPL;
 
 
+import jakarta.transaction.Transactional;
 import org.example.i3_springboot.Dto.CustomerDto;
 import org.example.i3_springboot.Repo.CustomerRepo;
 import org.example.i3_springboot.entity.Customer;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
+@Transactional
 public class CustomerServiceImpl implements CustomerService {
 
     @Autowired

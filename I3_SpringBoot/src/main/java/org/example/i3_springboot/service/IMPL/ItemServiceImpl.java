@@ -34,7 +34,8 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    public List<ItemDto> getAll() {
-        return List.of();
+    public List<Item> getAll() {
+        List<Item> list = itemRepo.findAll();
+        return list;
     }
 }

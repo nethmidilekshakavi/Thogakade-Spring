@@ -1,6 +1,7 @@
 package org.example.i3_springboot.service;
 
 import org.example.i3_springboot.Dto.ItemDto;
+import org.example.i3_springboot.entity.Item;
 
 import java.util.List;
 
@@ -12,5 +13,5 @@ public interface ItemService {
 
     void deleteItem(String code);
 
-    List<ItemDto> getAll ();
+    List<Item> getAll ();
 }
