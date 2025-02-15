@@ -35,7 +35,9 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public List<CustomerDto> gellAll() {
-        return List.of();
+    public List<Customer> gellAll() {
+       List<Customer> list = customerRepo.findAll();
+
+      return list;
     }
 }

@@ -1,6 +1,7 @@
 package org.example.i3_springboot.Controller;
 
 import org.example.i3_springboot.Dto.CustomerDto;
+import org.example.i3_springboot.entity.Customer;
 import org.example.i3_springboot.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,15 +18,15 @@ public class CustomerController {
 
     @PostMapping("save")
     public boolean saveCustomer(@RequestBody CustomerDto customerDto){
-        boolean res = customerService.saveCustomer(customerDto);
-        return res;
+        customerService.saveCustomer(customerDto);
+        return true;
 
     }
 
     @GetMapping("getAll")
-    public List<CustomerDto> getAllCustomers() {
+    public List<Customer> getAllCustomers() {
 
-   List<CustomerDto> list =   customerService.gellAll();
+   List<Customer> list =   customerService.gellAll();
 
         System.out.println(list);
 
@@ -40,11 +41,11 @@ public class CustomerController {
 
      return true;
     }
-
-    @PutMapping("update")
-    public  boolean updateCustomer(@RequestBody Integer id , CustomerDto customerDto){
-        boolean res = customerService.updateCustomer(id,customerDto);
-        return res;
+    @PutMapping("update/{id}")
+    public boolean updateCustomer(@PathVariable Integer id, @RequestBody CustomerDto customerDto) {
+         customerService.updateCustomer(id, customerDto);
+        return true;
     }
+
 
 }
